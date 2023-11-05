@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Лаба 8</title>
+  </head>
+  <body>
+    <script>
+      function ask(question, yes, no) {
+        const confirm = (question) => prompt(question) === "Так";
+        if (confirm(question)) {
+          yes();
+        } else {
+          no();
+        }
+      }
+
+      ask(
+        "Ви згодні?",
+        () => {
+          alert("Ви погодились.");
+        },
+        () => {
+          alert("Ви скасували виконання.");
+        }
+      );
+    </script>
+  </body>
+</html>
